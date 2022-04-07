@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Formulario"
+             x:Class="Formulario.View.FormularioPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl_principal"
+                   Text="Bienvenido. Favor de llenar el formulario"
+                   FontSize="Medium"/>
+            <Frame>
+                <StackLayout>
+                    <Entry x:Name="lbl_nombre"
+                           Placeholder="Nombre"
+                           FontSize="Medium"/>
+                    <Entry x:Name="lbl_edad"
+                           Placeholder="Edad"
+                           FontSize="Medium"
+                           HorizontalOptions="Start"/>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="btn_continuar"
+                    Text="Continuar"
+                    FontSize="Small"
+                    BackgroundColor="MediumVioletRed"
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
