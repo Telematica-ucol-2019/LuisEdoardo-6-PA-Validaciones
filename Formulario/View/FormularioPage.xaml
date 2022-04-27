@@ -4,26 +4,24 @@
              Title="Formulario"
              x:Class="Formulario.View.FormularioPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="lbl_principal"
-                   Text="Bienvenido. Favor de llenar el formulario"
-                   FontSize="Medium"/>
-            <Frame>
-                <StackLayout>
-                    <Entry x:Name="lbl_nombre"
-                           Placeholder="Nombre"
-                           FontSize="Medium"/>
-                    <Entry x:Name="lbl_edad"
-                           Placeholder="Edad"
-                           FontSize="Medium"
-                           HorizontalOptions="Start"/>
+        <StackLayout Margin="30,100,0,0">
+            <StackLayout Orientation="Horizontal" >
+                    <Label Text="Name"/>
+                    <Entry WidthRequest="250" Text="{Binding NombreTxt, Mode=TwoWay}"/>
                 </StackLayout>
-            </Frame>
-            <Button x:Name="btn_continuar"
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Label Text="Age"/>
+                    <Entry WidthRequest="50" Text="{Binding EdadNum, Mode=TwoWay}"/>
+                </StackLayout>
+                <Button x:Name="btn_continuar"
                     Text="Continuar"
                     FontSize="Small"
-                    BackgroundColor="MediumVioletRed"
-                    HorizontalOptions="End"/>
+                    BackgroundColor="SkyBlue"
+                    HorizontalOptions="End"
+                    CornerRadius="10"
+                    Margin="0,0,10,0"
+                    IsEnabled="False"
+                        Command="{Binding RegisterCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

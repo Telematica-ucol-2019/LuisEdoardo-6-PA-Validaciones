@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Formulario.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Formulario.View
         public FormularioPage()
         {
             InitializeComponent();
+            BindingContext = new FormViewModel();
         }
     }
 }
